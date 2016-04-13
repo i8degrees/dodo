@@ -1,0 +1,44 @@
+# nomlib
+
+	## feature/Audio
+
+		- Does AudioDevice fix Windows crash? YES! @done
+
+		- Ensure that we are not including ```<nomlib/config.hpp>``` in
+		any of the public header files
+
+		- Clean up nom::FPS class; incorporate changes from TTcards FPS (more accurate)
+
+		- Text: Remove mutable keyword from glyphs_texture_ once we are finished optimizing?
+
+		- Ensure that we add a NOM_ASSERT macro that is always enabled, even in
+		RELEASE builds, so that we can terminate in critical funcs
+
+		- Add nomlib-math as a dependency of nomlib-audio @done
+
+		- https://bugzilla.libsdl.org/show_bug.cgi?id=2779
+
+		- Consider consolidating libs down to something like: core (core+math), file (file + ptree + serializers)..?
+
+		- move file sources to src/file && include/nomlib/file, including tests
+
+		- Move JsonCpp, RapidXML sources to serializers dir?
+
+		- Study COM-style interfaces; see https://anteru.net/2007/03/21/161/ for an example.
+			* Related to my experimentation done with nom::IObject.
+			* 1. [Custom-tailored RTTI system](https://anteru.net/2006/01/02/61/)
+			* 2. [Custom-tailoring RTTI](https://anteru.net/2005/05/21/36/)
+
+		- platforms.hpp: Use ```__llvm__``` macro (clang)
+
+		- Fix NO-OP of nom::init when NOM_ASSERT macro is disabled
+
+		- virgo.local: Sync nomlib.git back to scorpio.local
+			* OpenAL.hpp
+
+		- Consider modifying the function signature of
+		```audio::init_audio``` to ```audio::init_audio(AudioSpec* request)```.
+		The end-user of the API should always explicitly check for the result
+		of their spec request.
+
+		- Implement ```audio::init_audio(IOAudioEngine* dev, AudioSpec* request)``` in spirit of [std::freopen](http://devdocs.io.dev:9292/cpp/io/c/freopen).
