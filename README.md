@@ -4,8 +4,6 @@ Task management
 
 ## Usage
 
-### Test
-
 ```shell
 ./todo.sh resources
 ```
