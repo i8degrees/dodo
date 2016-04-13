@@ -2,6 +2,14 @@
 
 Task management
 
+## Usage
+
+### Test
+
+```shell
+./todo.sh resources
+```
+
 ## Projects Using dodo
 
 ## Related Projects
